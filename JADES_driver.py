@@ -405,6 +405,8 @@ if Flag==7:
 #For Flag=8 ISL
 if Flag==8:
     print('PHOTMJSR=',dat[3], ', PIX_SR=',dat[4],', PIX_A2=',dat[5])
+    num_pixels=np.sum(np.isfinite(np.where(dat[1].data>0,dat[0].data,np.nan)))
+    print('Number of pixels =',num_pixels)
     
 print('------')
 
